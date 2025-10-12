@@ -1,0 +1,488 @@
+:root {
+  --color-primary: #b8dae6;
+  --color-bg-base: #ffffff; /* 全体の背景 */
+  --color-bg-block: #f6f6f1; /* ブロック・セクション背景 */
+  --color-text: #333;
+  --font-main: "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+  --spacing: 16px;
+  --max-width: 1166px;
+  --breakpoint-md: 768px;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-main), "Noto Sans JP", "ヒラギノ角ゴ Pro W3",
+    "游ゴシック", "メイリオ", sans-serif;
+  color: var(--color-text);
+  line-height: 1.7;
+  background-color: var(--color-bg-base);
+  font-size: 1.4rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrapper {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  /* padding: 0 var(--spacing); */
+}
+
+section {
+  margin: 0 100px;
+}
+
+.column {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  display: inline-block;
+  /* padding: var(--spacing) calc(var(--spacing) * 2); */
+  border-radius: 40px;
+  background-color: var(--color-primary);
+  color: #333;
+  text-align: center;
+  cursor: pointer;
+  display: flex; /* align-itemをきかせるため */
+  align-items: center;
+  padding: 7px 10px 7px 40px;
+  font-weight: 500;
+  letter-spacing: 0.04em; /* PhotoshopのVAD100に近い */
+}
+
+.btn::after {
+  width: 40px;
+  height: 40px;
+  margin-left: 30px;
+  background-image: url("../icon/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+  box-sizing: border-box;
+  content: "";
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.btn-sub {
+  position: relative;
+  display: inline-block; /* 擬似要素の基準にするため inline-block が安全 */
+  padding-bottom: 4px;
+}
+
+.btn-sub::after {
+  content: "";
+  position: absolute;
+  left: -16px; /* 左に16pxはみ出す */
+  bottom: 0;
+  width: calc(100% + 20px); /* 右側は少し短め（左より控えめ） */
+  height: 1px;
+  background-color: #333;
+}
+
+.section-title {
+  color: var(--color-text);
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-title__en {
+  color: var(--color-primary);
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 80px;
+}
+
+/* =========================
+   header
+   ========================= */
+
+header .inner {
+  margin: 15px 30px;
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+}
+
+header .logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+header .nav__list {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+}
+
+header .nav__item {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+header .instagram_link img {
+  width: 34px;
+  height: auto;
+}
+
+/* .btn-reserve::after {
+  width: 40px;
+  height: 40px;
+  margin-left: 8px;
+  background-image: url("../icon/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+  box-sizing: border-box; 
+  content: "";
+  border: 2px solid #fff;
+  border-radius: 50%;
+} */
+
+.en-large {
+  font-size: 1.7rem;
+}
+
+h2 {
+  content: "news";
+  color: var(--color-primary);
+  margin-left: 10px;
+}
+
+/* =========================
+  　mv
+   ========================= */
+
+.slider__item:nth-child(n + 2) {
+  display: none;
+}
+
+.mainVisual {
+  position: relative;
+}
+
+.mainVisual .mainVisual__inner {
+  margin: 0 30px 120px;
+}
+
+/* =========================
+  　news
+   ========================= */
+
+.news {
+  position: absolute;
+  bottom: -90px;
+  right: 0px;
+}
+
+.news .news__inner {
+  border-top: 8px solid var(--color-primary);
+  background-color: var(--color-bg-base);
+  padding: 25px;
+  width: 31vw;
+}
+.news .news__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.news .news__title {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 46px;
+  margin-right: 1.5rem;
+}
+
+.news__title .section-title__en {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.news .news__list {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: start;
+  gap: 10px;
+}
+
+.news .btn-sub {
+  margin-bottom: 46px;
+}
+.news .date::after {
+  content: "|";
+  margin-left: 10px;
+  color: var(--color-primary);
+}
+
+.news .date {
+  font-weight: 500;
+}
+
+/* =========================
+  concept
+   ========================= */
+
+.concept__inner {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 120px;
+}
+
+.concept .leadTitle {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.concept .concept__text {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+/* =========================
+  style
+   ========================= */
+
+/* =========================
+  hairMenu
+========================= */
+
+.hairMenu__inner {
+  background-color: var(--color-bg-block);
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.hairMenu .menu {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  align-items: flex-start;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.menu__category {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hairMenu .cut {
+  position: relative;
+  padding: 40px 10px;
+}
+
+.hairMenu .cut::before,
+.hairMenu .cut::after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  right: -10px;
+  height: 1px;
+  background: #b0b0b0;
+}
+
+.hairMenu .cut::before {
+  top: 0;
+}
+.hairMenu .cut::after {
+  bottom: -0.5px;
+}
+
+.menu__title {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.menu__category .label {
+  font-size: 2rem;
+}
+
+.menu__category .price {
+  font-size: 2.2rem;
+}
+
+.cut .menu__item {
+  display: flex; /* 横並びにする */
+  justify-content: space-between; /* 左右に分ける */
+  width: 180px;
+  padding-bottom: 21px;
+}
+
+.cut .menu__item:last-child {
+  padding-bottom: 0;
+}
+
+.fixed-price {
+  padding-right: 1.3rem;
+}
+
+.others .menu__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 380px;
+  padding: 40px 10px;
+  position: relative;
+}
+
+/* 上下に線を入れる  */
+.others .menu__item:last-child:after,
+.others .menu__item::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  right: -10px;
+  height: 1px;
+  background: #b0b0b0;
+}
+
+.others .menu__item::before {
+  top: 0;
+}
+
+.others .menu__item:last-child:after {
+  bottom: 0;
+}
+
+.cut .menu__title,
+.others .menu__item .label {
+  font-weight: 500;
+}
+
+.hairMenu .btn-sub {
+  display: block; /* １．aタグをブロック要素にしてmarginが効くようにする */
+  width: fit-content; /* ２．ブロック要素になり親要素いっぱいになった横幅をテキスト幅に合わせる */
+  margin: 0 auto;
+}
+
+.hairMenu .menu {
+  margin-bottom: 80px;
+}
+
+/* =========================
+  salon-photo
+========================= */
+.salon-photo__inner {
+  margin-bottom: 120px;
+}
+/* =========================
+  reserve
+========================= */
+
+.reserve__inner {
+  margin: 0 auto 120px;
+  width: fit-content;
+}
+
+.reserve .schedule {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+.tel-btn::after {
+  background-image: url("../icon/tel.svg");
+}
+
+.reserve .schedule-info > * {
+  margin-bottom: 10px;
+}
+.reserve .schedule-info .info-header {
+  font-size: 2rem;
+  font-weight: 500;
+  border-bottom: 2px solid var(--color-primary);
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.reserve .schedule-info .info-header span,
+.reserve .schedule-info .info-detail span {
+  flex: 1; /* 左右の幅を均等に */
+  display: block; /* 改行やpaddingを効かせやすく */
+}
+
+.reserve .info-detail {
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  line-height: 1.5;
+  margin-bottom: 70px;
+}
+
+.reserve .schedule-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.reserve .schedule-info__text {
+  text-align: center;
+}
+
+.reserve .btn-sub {
+  text-align: center;
+}
+
+/* =========================
+  access
+========================= */
+
+.access {
+  margin: 0 auto;
+}
+
+.access__content {
+  position: relative;
+}
+.access .access_info {
+  background-color: var(--color-bg-block);
+  padding-left: 50%;
+}
+
+.access__salon-photo {
+  position: absolute;
+  top: -80px;
+  left: 100px;
+}
+
+.access_info {
+  font-size: 1.8rem;
+  padding: 40px 0;
+}
+
+.access .logo {
+  position: relative;
+  display: inline-block; /* 擬似要素の基準にするため inline-block が安全 */
+  padding-bottom: 4px;
+}
+
+.access .logo::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 4px;
+  background-color: var(--color-primary);
+}
