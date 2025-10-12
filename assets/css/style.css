@@ -277,13 +277,13 @@ h2 {
   justify-content: center;
   gap: 80px;
   align-items: flex-start;
-  width: fit-content;
-  margin: 0 auto;
+  margin-bottom: 80px;
 }
 
 .menu__category {
   display: flex;
   justify-content: space-between;
+  width: 400px;
 }
 
 .hairMenu .cut {
@@ -373,10 +373,6 @@ h2 {
   display: block; /* １．aタグをブロック要素にしてmarginが効くようにする */
   width: fit-content; /* ２．ブロック要素になり親要素いっぱいになった横幅をテキスト幅に合わせる */
   margin: 0 auto;
-}
-
-.hairMenu .menu {
-  margin-bottom: 80px;
 }
 
 /* =========================
