@@ -79,6 +79,8 @@ body > section {
   position: relative;
   display: inline-block; /* 擬似要素の基準にするため inline-block が安全 */
   padding-bottom: 4px;
+  font-weight: 500;
+  letter-spacing: 2px;
 }
 
 .btn-sub::after {
@@ -273,6 +275,10 @@ h2 {
 .style {
   margin-right: 0px;
 }
+
+.style__inner {
+  margin-bottom: 120px;
+}
 .style__title {
   text-align: start;
 }
@@ -282,6 +288,7 @@ h2 {
   justify-content: end;
   gap: 25px;
   position: relative;
+  margin-bottom: 40px;
 }
 
 .style__images::after {
@@ -293,6 +300,12 @@ h2 {
   position: absolute;
   bottom: -50px;
   left: -100px;
+}
+
+.instagram-btn__wrapper {
+  display: flex;
+  justify-content: end;
+  margin-right: 100px;
 }
 /* =========================
   hairMenu
