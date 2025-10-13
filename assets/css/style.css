@@ -98,7 +98,7 @@ body > section {
   font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 80px;
 }
 
 .section-title__en {
@@ -106,7 +106,6 @@ body > section {
   display: block;
   font-size: 1.6rem;
   font-weight: 700;
-  margin-bottom: 80px;
   letter-spacing: 2px;
 }
 
@@ -515,24 +514,34 @@ h2 {
   margin: 0 auto;
 }
 
+.access__title {
+  margin-bottom: 160px;
+}
+
 .access__content {
   position: relative;
-}
-.access .access_info {
+  display: flex;
   background-color: var(--color-bg-block);
-  padding-left: 50%;
 }
 
-.access__salon-photo {
-  position: absolute;
-  top: -80px;
-  left: 100px;
+.access__content > div {
+  flex: 1;
 }
 
-.access_info {
+.access .access_info {
   font-size: 1.8rem;
   padding: 40px 0;
   letter-spacing: 2px;
+}
+
+.access__salon-photo {
+  position: relative;
+}
+
+.access__salon-photo > img {
+  position: absolute;
+  top: -80px;
+  left: 100px;
 }
 
 .access .logo__wrapper {
