@@ -94,6 +94,7 @@ body > section {
 .section-title {
   color: var(--color-text);
   font-size: 2.5rem;
+  font-weight: 700;
   text-align: center;
   margin-bottom: 1.5rem;
 }
@@ -269,7 +270,30 @@ h2 {
 /* =========================
   style
    ========================= */
+.style {
+  margin-right: 0px;
+}
+.style__title {
+  text-align: start;
+}
 
+.style__images {
+  display: flex;
+  justify-content: end;
+  gap: 25px;
+  position: relative;
+}
+
+.style__images::after {
+  content: "";
+  width: 363px;
+  height: 74px;
+  background-image: url(../img/style/style_instagram.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -50px;
+  left: -100px;
+}
 /* =========================
   hairMenu
 ========================= */
