@@ -41,7 +41,7 @@ a {
   /* padding: 0 var(--spacing); */
 }
 
-.mainVisual > section {
+body > section {
   margin: 0 100px;
 }
 
@@ -440,6 +440,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  margin-bottom: 40px;
 }
 
 .tel-btn {
@@ -464,9 +465,10 @@ h2 {
   text-align: center;
 }
 
-/* .hotppeper {
-  text-align: end;
-} */
+.hotpepper {
+  display: flex;
+  justify-content: center;
+}
 
 /* =========================
   access
@@ -493,11 +495,14 @@ h2 {
 .access_info {
   font-size: 1.8rem;
   padding: 40px 0;
+  letter-spacing: 2px;
 }
 
 .access .logo__wrapper {
   position: relative;
-  display: inline-block; /* 擬似要素の基準にするため inline-block が安全 */
+  display: flex;
+  align-items: end;
+  gap: 20px;
   padding-bottom: 40px;
 }
 
@@ -511,6 +516,11 @@ h2 {
   background-color: var(--color-primary);
 }
 
+.access__instagram {
+  width: 24px;
+  height: 24px;
+}
+
 .access address {
   margin-top: 40px;
   margin-bottom: 1rem;
@@ -518,7 +528,7 @@ h2 {
 
 .access-detail {
   margin-bottom: 1rem;
-  position: relative;
+  line-height: 1.3;
 }
 
 .g-map__btn {
@@ -536,25 +546,20 @@ h2 {
 .access .tel-number {
   position: relative;
   padding-left: 22px;
+  font-size: 2rem;
+  line-height: 1;
 }
 
 .access .tel-number::before {
   content: "";
   position: absolute;
-  top: 0;
+  bottom: 2px;
   left: 0;
   background-image: url(../icon/tel.svg);
   width: 17px;
   height: 21px;
   background-repeat: no-repeat;
   background-position: center;
-}
-.access__instagram {
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  bottom: 50px;
-  right: 100px;
 }
 
 /* =========================
