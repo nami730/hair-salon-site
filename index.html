@@ -28,6 +28,21 @@
     <!-- css -->
     <link rel="stylesheet" href="assets/css/destyle.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- googleカレンダー -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js"></script>
+    <script src="assets/js/index.global.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var calendarEl = document.getElementById("calendar");
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: "dayGridMonth",
+          events:
+            "2efdf58c3bb73738fa165e11257d56a73023bea64bd5541d9163f5d2fc7a498e",
+          googleCalendarApiKey: "AIzaSyCWARKYYoLJVsWOzYZZI2Ytp5EOPgID1Wk",
+        });
+        calendar.render();
+      });
+    </script>
   </head>
 
   <body>
@@ -207,6 +222,7 @@
             </h3>
             <!-- カレンダー埋め込み or 画像など -->
             <img src="calendar.jpg" alt="営業カレンダー" class="calendar-img" />
+            <div id="calendar"></div>
           </div>
 
           <!-- 右カラム：営業情報＋ボタン -->
