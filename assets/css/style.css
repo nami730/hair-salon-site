@@ -526,3 +526,16 @@ h2 {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+/* =========================
+  footer
+========================= */
+
+.footer__inner {
+  margin: 0 20px;
+  text-align: center;
+}
+
+.coppyright {
+  font-size: 1rem;
+}
