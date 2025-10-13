@@ -496,6 +496,7 @@ h2 {
 
 .access-detail {
   margin-bottom: 1rem;
+  position: relative;
 }
 
 .g-map__btn {
@@ -525,6 +526,13 @@ h2 {
   height: 21px;
   background-repeat: no-repeat;
   background-position: center;
+}
+.access__instagram {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  bottom: 50px;
+  right: 100px;
 }
 
 /* =========================
