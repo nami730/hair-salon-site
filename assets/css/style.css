@@ -473,13 +473,13 @@ h2 {
   padding: 40px 0;
 }
 
-.access .logo {
+.access .logo__wrapper {
   position: relative;
   display: inline-block; /* 擬似要素の基準にするため inline-block が安全 */
-  padding-bottom: 4px;
+  padding-bottom: 40px;
 }
 
-.access .logo::after {
+.access .logo__wrapper::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -487,4 +487,42 @@ h2 {
   width: 100px;
   height: 4px;
   background-color: var(--color-primary);
+}
+
+.access address {
+  margin-top: 40px;
+  margin-bottom: 1rem;
+}
+
+.access-detail {
+  margin-bottom: 1rem;
+}
+
+.g-map__btn {
+  display: inline-block;
+  background-color: var(--color-primary);
+  padding: 3px 40px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-left: 10px;
+}
+
+.access .tel-number {
+  position: relative;
+  padding-left: 22px;
+}
+
+.access .tel-number::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(../icon/tel.svg);
+  width: 17px;
+  height: 21px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
