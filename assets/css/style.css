@@ -440,7 +440,16 @@ h2 {
   gap: 40px;
 }
 
+.schedule-calendar,
+.schedule-info {
+  flex: 1;
+}
+
 /* カレンダーデザイン */
+
+#calendar {
+  height: 400px;
+}
 #fc-dom-1 {
   color: #333;
 }
