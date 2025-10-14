@@ -171,9 +171,9 @@ h2 {
   　mv
    ========================= */
 
-.slider__item:nth-child(n + 2) {
+/* .slider__item:nth-child(n + 2) {
   display: none;
-}
+} */
 
 .mainVisual {
   position: relative;

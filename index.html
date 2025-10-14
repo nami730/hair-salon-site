@@ -26,6 +26,8 @@
       rel="stylesheet"
     />
     <!-- css -->
+    <link href="assets/css/slick.css" rel="stylesheet" />
+    <link href="assets/css/slick-theme.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/destyle.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <!-- googleカレンダー -->
@@ -33,7 +35,7 @@
     <script src="assets/js/index.global.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        var calendarEl = document.getElementById("calendar");
+        var scalendarEl = document.getElementById("calendar");
         var calendar = new FullCalendar.Calendar(calendarEl, {
           initialView: "dayGridMonth",
           events:
@@ -70,17 +72,17 @@
     </header>
     <div class="mainVisual">
       <div class="mainVisual__inner">
-        <ul class="slider__list">
-          <li class="slider__item">
+        <div class="slider slider__list">
+          <div class="slider__item">
             <img src="assets/img/mv/mv_01.jpg" alt="" />
-          </li>
-          <li class="slider__item">
+          </div>
+          <div class="slider__item">
             <img src="assets/img/mv/mv_02.jpg" alt="" />
-          </li>
-          <li class="slider__item">
+          </div>
+          <div class="slider__item">
             <img src="assets/img/mv/mv_03.jpg" alt="" />
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
       <section class="news">
         <div class="news__inner">
@@ -91,7 +93,7 @@
             </h2>
             <a class="btn-sub" href="assets/news.html">all view</a>
           </div>
-          <article class="news__list">
+          <article class="news__slist">
             <time class="date" datetime="2021-02-01">2021.02.01</time>
             <h3 class="title">2月の営業日のお知らせ</h3>
           </article>
@@ -217,8 +219,6 @@
         <div class="schedule">
           <!-- 左カラム：カレンダー -->
           <div class="schedule-calendar">
-            <h3 class="schedule-title"></h3>
-            <!-- カレンダー埋め込み or 画像など -->
             <div id="calendar"></div>
           </div>
 
@@ -303,5 +303,8 @@
         <small class="coppyright">@kobayas_s All Right Reserved.</small>
       </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
