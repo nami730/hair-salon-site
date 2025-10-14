@@ -439,6 +439,43 @@ h2 {
   justify-content: space-between;
   gap: 40px;
 }
+
+/* カレンダーデザイン */
+#fc-dom-1 {
+  color: #333;
+}
+
+.fc .fc-button-primary {
+  /* color: var(--fc-button-text-color); */
+  color: var(--color-primary);
+}
+
+.fc .fc-prev-button {
+  /* background-color: pink; */
+  background-color: var(--color-bg-block);
+  border: 1px solid #fff;
+}
+
+.fc .fc-next-button {
+  background-color: var(--color-bg-block);
+  border: 1px solid #fff;
+}
+
+.fc .fc-today-button {
+  background-color: var(--color-primary);
+  color: #333;
+  barder: 1px solid #fff;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+  background-color: var(--color-primary);
+}
+
+.fc .fc-col-header {
+  background-color: var(--color-bg-block);
+  color: #333;
+}
+/* ←カレンダーデザイン */
 .tel-btn::after {
   background-image: url("../icon/tel.svg");
   background-color: var(--color-primary);
