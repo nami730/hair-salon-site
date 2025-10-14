@@ -36,6 +36,7 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         var scalendarEl = document.getElementById("calendar");
+        var calendarEl = document.getElementById("calendar");
         var calendar = new FullCalendar.Calendar(calendarEl, {
           initialView: "dayGridMonth",
           events:
@@ -93,7 +94,7 @@
             </h2>
             <a class="btn-sub" href="assets/news.html">all view</a>
           </div>
-          <article class="news__slist">
+          <article class="news__list">
             <time class="date" datetime="2021-02-01">2021.02.01</time>
             <h3 class="title">2月の営業日のお知らせ</h3>
           </article>
@@ -221,7 +222,6 @@
           <div class="schedule-calendar">
             <div id="calendar"></div>
           </div>
-
           <!-- 右カラム：営業情報＋ボタン -->
           <div class="schedule-info">
             <div class="info-header">

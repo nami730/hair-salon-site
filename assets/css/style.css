@@ -42,7 +42,10 @@ a {
 }
 
 body > section {
-  margin: 0 100px;
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0 100px;
+  box-sizing: border-box;
 }
 
 .btn {
@@ -170,11 +173,6 @@ h2 {
 /* =========================
   　mv
    ========================= */
-
-/* .slider__item:nth-child(n + 2) {
-  display: none;
-} */
-
 .mainVisual {
   position: relative;
 }
@@ -271,9 +269,6 @@ h2 {
 /* =========================
   style
    ========================= */
-.style {
-  margin-right: 0px;
-}
 
 .style__inner {
   margin-bottom: 120px;
@@ -425,6 +420,9 @@ h2 {
 .salon-photo__inner {
   margin-bottom: 120px;
 }
+.salon-photo__inner > img {
+  margin: auto;
+}
 /* =========================
   reserve
 ========================= */
@@ -469,7 +467,7 @@ h2 {
 .fc .fc-today-button {
   background-color: var(--color-primary);
   color: #333;
-  barder: 1px solid #fff;
+  border: 1px solid #fff;
 }
 
 .fc .fc-daygrid-day.fc-day-today {
@@ -556,6 +554,7 @@ h2 {
 
 .access {
   margin: 0 auto;
+  padding: 0;
 }
 
 .access__title {
