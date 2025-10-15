@@ -49,7 +49,7 @@ body > section {
 }
 
 .btn {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   display: inline-block;
   /* padding: var(--spacing) calc(var(--spacing) * 2); */
   border-radius: 40px;
@@ -61,7 +61,7 @@ body > section {
   align-items: center;
   padding: 7px 10px 7px 40px;
   font-weight: 500;
-  letter-spacing: 0.04em; /* PhotoshopのVAD100に近い */
+  letter-spacing: 1px; /* PhotoshopのVAD100に近い */
 }
 
 .btn::after {
@@ -146,22 +146,8 @@ header .instagram_link img {
   height: auto;
 }
 
-/* .btn-reserve::after {
-  width: 40px;
-  height: 40px;
-  margin-left: 8px;
-  background-image: url("../icon/calendar.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 20px 20px;
-  box-sizing: border-box; 
-  content: "";
-  border: 2px solid #fff;
-  border-radius: 50%;
-} */
-
 .en-large {
-  font-size: 1.7rem;
+  font-size: 1.9rem;
 }
 
 h2 {
@@ -178,7 +164,12 @@ h2 {
 }
 
 .mainVisual .mainVisual__inner {
-  margin: 0 30px 120px;
+  margin: 0 auto 120px; /* 上下0と120px、左右はautoで中央寄せ */
+  padding: 0 30px;
+}
+
+.slider__item > img {
+  width: 100%;
 }
 
 /* =========================
@@ -207,12 +198,12 @@ h2 {
   font-weight: 700;
   font-size: 1.4rem;
   margin-bottom: 46px;
-  margin-right: 1.5rem;
 }
 
 .news__title .section-title__en {
   display: inline-block;
   margin-bottom: 0;
+  margin-left: 10px;
 }
 
 .news .news__list {
@@ -252,7 +243,6 @@ h2 {
 .concept .leadTitle {
   font-size: 2.4rem;
   font-weight: 700;
-  margin-bottom: 20px;
   letter-spacing: 6px;
 }
 
@@ -263,12 +253,15 @@ h2 {
 .concept .concept__text {
   font-size: 1.6rem;
   margin-bottom: 1rem;
-  letter-spacing: 4px;
+  letter-spacing: 1px;
 }
 
 /* =========================
   style
    ========================= */
+.style {
+  padding: 0 0 0 100px;
+}
 
 .style__inner {
   margin-bottom: 120px;
@@ -546,6 +539,7 @@ h2 {
 .hotpepper {
   display: flex;
   justify-content: center;
+  font-size: 1.2rem;
 }
 
 /* =========================
