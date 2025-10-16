@@ -153,7 +153,6 @@ header .instagram_link img {
 h2 {
   content: "news";
   color: var(--color-primary);
-  margin-left: 10px;
 }
 
 /* =========================
@@ -192,12 +191,13 @@ h2 {
 .news .news__header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .news .news__title {
   font-weight: 700;
   font-size: 1.4rem;
-  margin-bottom: 46px;
+  margin-bottom: 0;
 }
 
 .news__title .section-title__en {
@@ -213,9 +213,6 @@ h2 {
   gap: 10px;
 }
 
-.news .btn-sub {
-  margin-bottom: 46px;
-}
 .news .date::after {
   content: "|";
   margin-left: 10px;
@@ -241,6 +238,7 @@ h2 {
 }
 
 .concept .leadTitle {
+  color: #333;
   font-size: 2.4rem;
   font-weight: 700;
   letter-spacing: 6px;
@@ -286,7 +284,7 @@ h2 {
   background-repeat: no-repeat;
   position: absolute;
   bottom: -50px;
-  left: -100px;
+  left: -140px;
 }
 
 .instagram-btn__wrapper {
@@ -432,11 +430,32 @@ h2 {
 }
 
 /* カレンダーデザイン */
-
-#calendar {
-  width: 400px;
-  height: 400px;
+.fc-header-toolbar,
+.fc-view-harness,
+.fc-col-header,
+.fc-daygrid-body,
+.fc-scrollgrid-sync-table {
+  width: 100%;
+  max-width: 600px;
 }
+
+.fc-scrollgrid-sync-table {
+  /*! width: 398px; */
+}
+
+.fc-daygrid-body {
+  /*! width: 398px; */
+}
+
+.fc-col-header {
+  /*! width: 398px; */
+}
+
+.schedule-calendar,
+.schedule-info {
+  flex: 1;
+}
+
 #fc-dom-1 {
   color: #333;
 }
@@ -458,9 +477,14 @@ h2 {
 }
 
 .fc .fc-today-button {
-  background-color: var(--color-primary);
   color: #333;
-  border: 1px solid #fff;
+  background-color: var(--color-primary);
+  font-weight: bold;
+}
+
+.fc .fc-today-button:hover {
+  background-color: var(--color-primary);
+  border: none;
 }
 
 .fc .fc-daygrid-day.fc-day-today {
@@ -470,6 +494,15 @@ h2 {
 .fc .fc-col-header {
   background-color: var(--color-bg-block);
   color: #333;
+}
+
+.fc-header-toolbar,
+.fc-view-harness,
+.fc-col-header,
+.fc-daygrid-body,
+.fc-scrollgrid-sync-table {
+  width: 100%;
+  max-width: 1000px;
 }
 /* ←カレンダーデザイン */
 

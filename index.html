@@ -30,24 +30,7 @@
     <link href="assets/css/slick-theme.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/destyle.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <!-- googleカレンダー -->
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js"></script>
-    <script src="assets/js/index.global.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var scalendarEl = document.getElementById("calendar");
-        var calendarEl = document.getElementById("calendar");
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: "dayGridMonth",
-          events:
-            "2efdf58c3bb73738fa165e11257d56a73023bea64bd5541d9163f5d2fc7a498e",
-          googleCalendarApiKey: "AIzaSyCWARKYYoLJVsWOzYZZI2Ytp5EOPgID1Wk",
-        });
-        calendar.render();
-      });
-    </script>
   </head>
-
   <body>
     <header>
       <div class="inner">
@@ -113,11 +96,11 @@
     <section class="concept">
       <div class="concept__inner">
         <div class="lead">
-          <p class="leadTitle">
+          <h2 class="leadTitle">
             「ナチュラルな美しさを引き出し、<br />
             新しい自分に気付くきっかけを<br />
             ご提供します」
-          </p>
+          </h2>
           <span class="section-title__en">concept</span>
           <p class="concept__text">
             常に新しい美の発見をお客様に感じて貰うため、<br />
@@ -306,5 +289,30 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.5/index.global.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var calendarEl = document.getElementById("calendar");
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: "dayGridMonth",
+          height: "auto",
+          locale: "ja",
+          dayCellContent: function (arg) {
+            return arg.date.getDate();
+          },
+          googleCalendarApiKey: "AIzaSyCWARKYYoLJVsWOzYZZI2Ytp5EOPgID1Wk",
+          eventSources: [
+            {
+              googleCalendarId:
+                "2efdf58165e11257d56a73023bea64bd5541d9163f5d2fc7a498e@group.calendar.google.com",
+              className: "gcal-event",
+            },
+          ],
+        });
+
+        calendar.render();
+      });
+    </script>
   </body>
 </html>
