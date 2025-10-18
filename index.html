@@ -9,14 +9,14 @@
 新しい自分に気付くきっかけを
 ご提供します」"
     />
-    <title>KOBAYAS | こばやすのヘアサロン・美容室</title>
+    <title>【架空サイト】KOBAYAS | こばやすのヘアサロン・美容室</title>
 
     <!-- favicon apple-touch-icon -->
-    <link rel="icon" href="assets/images/favicon/favicon.ico" id="favicon" />
+    <link rel="icon" href="assets/icon/favicons/favicon.ico" id="favicon" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="assets/images/favicon/apple-touch-icon-180x180.png"
+      href="assets/icon/favicons/apple-touch-icon-180x180.png"
     />
     <!-- web font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,15 +35,19 @@
     <header>
       <div class="inner">
         <h1 class="logo">
-          <img src="assets/img/logo.png" alt="hair salon KOBAYAS" />
+          <img src="assets/img/logo@2x.png" alt="hair salon KOBAYAS" />
         </h1>
         <nav>
           <ul class="nav__list">
-            <li class="nav__item"><a href="#">ヘアメニュー</a></li>
-            <li class="nav__item"><a href="#">スタイリストの紹介</a></li>
-            <li class="nav__item"><a href="#">過去のお知らせ</a></li>
+            <li class="nav__item"><a href="hairmenu.html">ヘアメニュー</a></li>
+            <li class="nav__item">
+              <a href="stylist.html">スタイリストの紹介</a>
+            </li>
+            <li class="nav__item"><a href="news.html">過去のお知らせ</a></li>
             <li class="nav__item instagram_link">
-              <a href="#"><img src="assets/icon/instagram.svg" alt="" /></a>
+              <a href="#"
+                ><img src="assets/icon/instagram.png" alt="instagram icon"
+              /></a>
             </li>
             <li class="nav__item btn-reserve">
               <a href="#" class="btn"
@@ -134,7 +138,7 @@
           <img src="assets/img/style/style_05.jpg" alt="" />
         </div>
         <div class="instagram-btn__wrapper">
-          <a href="/hairmenu.html" class="btn-sub instagram-btn">
+          <a href="hairmenu.html" class="btn-sub instagram-btn">
             公式instagram
           </a>
         </div>
@@ -149,7 +153,7 @@
         <div class="menu">
           <!-- 左カラム：カット -->
           <div class="menu__category cut">
-            <div class="menu__title">カット</div>
+            <h3 class="menu__title">カット</h3>
             <ul class="menu__list price-category">
               <li class="menu__item general">
                 <span class="label">一般</span>
@@ -165,7 +169,6 @@
               </li>
             </ul>
           </div>
-
           <!-- 右カラム：カラー・パーマなど -->
           <div class="menu__category others">
             <ul class="menu__list">
@@ -207,32 +210,36 @@
           </div>
           <!-- 右カラム：営業情報＋ボタン -->
           <div class="schedule-info">
-            <div class="info-header">
-              <span class="open-label">営業日</span>
-              <span class="close-label">定休日</span>
-            </div>
-            <div class="info-detail">
-              <span class="open-time"
-                >平日 10：00～20：00<br />土日祝 10：00～18：00</span
-              >
-              <span class="holiday">月曜、第二・第三 火曜</span>
-            </div>
-            <p class="schedule-info__text">
-              希望する日程とメニュー内容をお選びください。
-            </p>
-            <div class="schedule-buttons">
-              <div>
-                <a href="/reserve" class="btn reserve-btn"> WEBで予約 </a>
+            <div class="inner">
+              <div class="info-header">
+                <span class="open-label">営業日</span>
+                <span class="close-label">定休日</span>
               </div>
-              <div class="tel-btn__wrapper">
-                <a href="tel:0000-5678-1234" class="btn tel-btn">
-                  電話で予約
-                </a>
-                <span class="tel-number">0000-5678-1234</span>
+              <div class="info-detail">
+                <span class="open-time"
+                  >平日 10：00～20：00<br />土日祝 10：00～18：00</span
+                >
+                <span class="holiday">月曜、第二・第三 火曜</span>
               </div>
-            </div>
-            <div class="hotpepper">
-              <a href="#" class="btn-sub">ホットペッパー予約はこちら</a>
+              <p class="schedule-info__text">
+                希望する日程とメニュー内容をお選びください。
+              </p>
+              <div class="schedule-buttons">
+                <div>
+                  <a href="#" class="btn reserve-btn"> WEBで予約 </a>
+                </div>
+                <div class="tel-btn__wrapper">
+                  <a href="tel:0000-5678-1234" class="btn tel-btn">
+                    電話で予約
+                  </a>
+                  <span class="tel-number">0000-5678-1234</span>
+                </div>
+              </div>
+              <div class="hotpepper">
+                <a href="https://beauty.hotpepper.jp/" class="btn-sub"
+                  >ホットペッパー予約はこちら</a
+                >
+              </div>
             </div>
           </div>
         </div>
@@ -249,15 +256,11 @@
             <img src="assets/img/access_img.jpg" alt="美容室前の写真" />
           </div>
           <div class="access_info">
-            <div class="logo__wrapper">
-              <img
-                class="logo"
-                src="assets/img/logo.png"
-                alt="hair salon KOBAYAS"
-              />
+            <div class="logo">
+              <img src="assets/img/logo@2x.png" alt="hair salon KOBAYAS" />
               <img
                 class="access__instagram"
-                src="assets/icon/instagram.svg"
+                src="assets/icon/instagram.png"
                 alt="instagram icon"
               />
             </div>
