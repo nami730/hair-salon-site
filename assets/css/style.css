@@ -718,11 +718,13 @@ h2 {
 
   .news {
     position: static;
+    margin: 0 2.2%;
   }
 
   .news .news__inner {
     width: 100%; /* pc 30vw */
     margin-top: -30px;
+    padding-bottom: 40px;
   }
 
   .news .news__list {
