@@ -172,7 +172,7 @@ h2 {
 
 .mainVisual .mainVisual__inner {
   margin: 0 auto 120px; /* 上下0と120px、左右はautoで中央寄せ */
-  padding: 0 30px;
+  padding: 0 2.2%;
 }
 
 .slider__item > img {
@@ -194,7 +194,7 @@ h2 {
   border-top: 8px solid var(--color-primary);
   background-color: var(--color-bg-base);
   padding: 25px;
-  width: 31vw;
+  width: 30vw;
 }
 .news .news__header {
   display: flex;
@@ -702,5 +702,31 @@ h2 {
 @media (max-width: 767px) {
   .logo img {
     max-width: 40%;
+  }
+
+  .mainVisual .mainVisual__inner {
+    margin: 0 auto; /* pc  mvしたのマージン外す */
+  }
+
+  .mainVisual .slick-dots {
+    display: none !important;
+  }
+
+  .news__list {
+    font-size: 1.2rem;
+  }
+
+  .news {
+    position: static;
+  }
+
+  .news .news__inner {
+    width: 100%; /* pc 30vw */
+    margin-top: -30px;
+  }
+
+  .news .news__list {
+    margin-bottom: 0px;
+    font-size: 1.2rem;
   }
 }
