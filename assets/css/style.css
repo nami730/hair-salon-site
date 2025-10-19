@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 :root {
   --color-primary: #b8dae6;
   --color-bg-base: #ffffff; /* 全体の背景 */
@@ -259,6 +261,10 @@ h2 {
   letter-spacing: 1px;
 }
 
+.lead_image {
+  height: 440px;
+}
+
 /* =========================
   style
    ========================= */
@@ -443,18 +449,6 @@ h2 {
 .fc-scrollgrid-sync-table {
   width: 100%;
   max-width: 600px;
-}
-
-.fc-scrollgrid-sync-table {
-  /*! width: 398px; */
-}
-
-.fc-daygrid-body {
-  /*! width: 398px; */
-}
-
-.fc-col-header {
-  /*! width: 398px; */
 }
 
 .schedule-calendar,
