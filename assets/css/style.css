@@ -51,7 +51,8 @@ body > section {
 }
 
 .logo img {
-  width: 200px;
+  width: 50%;
+  max-width: 50%;
   height: auto;
 }
 
@@ -695,4 +696,11 @@ h2 {
 
 .coppyright {
   font-size: 1rem;
+}
+
+/* ===== SP ===== */
+@media (max-width: 767px) {
+  .logo img {
+    max-width: 40%;
+  }
 }
