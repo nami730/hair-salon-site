@@ -262,10 +262,6 @@ h2 {
   letter-spacing: 1px;
 }
 
-/* .lead_image {
-  height: 440px;
-} */
-
 /* =========================
   style
    ========================= */
@@ -764,5 +760,36 @@ h2 {
   .concept .concept__text {
     width: 24em;
     font-size: 1.4rem;
+  }
+
+  /* =========================
+  style
+========================= */
+
+  .style {
+    padding: 0 8%;
+  }
+
+  .style__inner {
+    /* margin-bottom: 120px; */
+    margin-bottom: 80px;
+  }
+
+  .style__images {
+    justify-content: start;
+    gap: 10px;
+    margin-left: 100px;
+  }
+
+  .style__images::after {
+    width: 270px;
+    background-size: contain;
+    background-position: center;
+    bottom: -45px;
+    left: -133px;
+  }
+
+  .instagram-btn__wrapper {
+    margin-right: 0px;
   }
 }
