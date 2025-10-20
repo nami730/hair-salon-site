@@ -262,9 +262,9 @@ h2 {
   letter-spacing: 1px;
 }
 
-.lead_image {
+/* .lead_image {
   height: 440px;
-}
+} */
 
 /* =========================
   style
@@ -730,5 +730,39 @@ h2 {
   .news .news__list {
     margin-bottom: 0px;
     font-size: 1.2rem;
+  }
+
+  body > section {
+    padding: 0 8%;
+  }
+  /* =========================
+  concept
+========================= */
+
+  .lead_image {
+    /* height: 440px; */
+    /* padding-right: 0; */
+    margin-bottom: 40px;
+    margin-left: 8%;
+    display: block;
+  }
+
+  .concept__inner {
+    /* justify-content: space-between; */
+    /* margin-bottom: 120px; */
+    margin-bottom: 80px;
+    flex-direction: column-reverse;
+  }
+
+  .concept .leadTitle {
+    /* font-size: 2.4rem; */
+    /* letter-spacing: 6px; */
+    font-size: 1.8rem;
+    letter-spacing: 0.15rem;
+  }
+
+  .concept .concept__text {
+    width: 24em;
+    font-size: 1.4rem;
   }
 }
