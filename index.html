@@ -210,37 +210,37 @@
             <div id="calendar"></div>
           </div>
           <!-- 右カラム：営業情報＋ボタン -->
-          <div class="schedule-info">
-            <div class="inner">
-              <div class="info-header">
-                <span class="open-label">営業日</span>
-                <span class="close-label">定休日</span>
+          <div class="schedule-info__wrapper">
+            <table class="schedule-info">
+              <tr class="info-header">
+                <th class="open-label">営業日</th>
+                <th class="close-label">定休日</th>
+              </tr>
+              <tr class="info-detail">
+                <td class="open-time">
+                  平日 10：00~20：00<br />土日祝 10：00~18：00
+                </td>
+                <td class="holiday">月曜、第二・第三 火曜</td>
+              </tr>
+            </table>
+            <p class="schedule-info__text">
+              希望する日程とメニュー内容をお選びください。
+            </p>
+            <div class="schedule-buttons">
+              <div>
+                <a href="#" class="btn reserve-btn"> WEBで予約 </a>
               </div>
-              <div class="info-detail">
-                <span class="open-time"
-                  >平日 10：00～20：00<br />土日祝 10：00～18：00</span
-                >
-                <span class="holiday">月曜、第二・第三 火曜</span>
+              <div class="tel-btn__wrapper">
+                <a href="tel:0000-5678-1234" class="btn tel-btn">
+                  電話で予約
+                </a>
+                <span class="tel-number">0000-5678-1234</span>
               </div>
-              <p class="schedule-info__text">
-                希望する日程とメニュー内容をお選びください。
-              </p>
-              <div class="schedule-buttons">
-                <div>
-                  <a href="#" class="btn reserve-btn"> WEBで予約 </a>
-                </div>
-                <div class="tel-btn__wrapper">
-                  <a href="tel:0000-5678-1234" class="btn tel-btn">
-                    電話で予約
-                  </a>
-                  <span class="tel-number">0000-5678-1234</span>
-                </div>
-              </div>
-              <div class="hotpepper">
-                <a href="https://beauty.hotpepper.jp/" class="btn-sub"
-                  >ホットペッパー予約はこちら</a
-                >
-              </div>
+            </div>
+            <div class="hotpepper">
+              <a href="https://beauty.hotpepper.jp/" class="btn-sub"
+                >ホットペッパー予約はこちら</a
+              >
             </div>
           </div>
         </div>
