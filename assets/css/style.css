@@ -312,6 +312,7 @@ h2 {
 
 .hairMenu .menu {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 80px;
   align-items: flex-start;
@@ -445,7 +446,6 @@ h2 {
 .fc-daygrid-body,
 .fc-scrollgrid-sync-table {
   width: 100%;
-  max-width: 600px;
 }
 
 .schedule-calendar,
@@ -499,7 +499,6 @@ h2 {
 .fc-daygrid-body,
 .fc-scrollgrid-sync-table {
   width: 100%;
-  max-width: 1000px;
 }
 /* ←カレンダーデザイン */
 
@@ -514,7 +513,6 @@ h2 {
 }
 
 .reserve .schedule-info > .inner {
-  width: 500px;
 }
 .reserve .schedule-info .info-header {
   font-size: 2.2rem;
@@ -523,7 +521,6 @@ h2 {
   display: flex;
   justify-content: space-between;
   margin-top: 54px;
-  width: 500px;
   gap: 70px;
 }
 
@@ -543,6 +540,7 @@ h2 {
 
 .reserve .schedule-buttons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
   margin-bottom: 30px;
@@ -791,5 +789,38 @@ h2 {
 
   .instagram-btn__wrapper {
     margin-right: 0px;
+  }
+  /* =========================
+  hairmenu
+========================= */
+  .hairMenu .menu {
+    /* align-items: flex-start; */
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .menu__category {
+    /* width: 280px; */
+    width: 100%;
+  }
+
+  .others .menu__item {
+    width: 100%;
+  }
+
+  .others .menu__list {
+    width: 100%;
+  }
+  /* =========================
+  reserve
+========================= */
+  .reserve .schedule {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .schedule-calendar,
+  .schedule-info {
+    width: 100%;
   }
 }
