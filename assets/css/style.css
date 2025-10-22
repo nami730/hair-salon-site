@@ -316,13 +316,14 @@ h2 {
   justify-content: center;
   gap: 80px;
   align-items: flex-start;
-  margin-bottom: 80px;
+  width: 80%;
+  margin: 0 auto 80px;
 }
 
 .menu__category {
   display: flex;
   justify-content: space-between;
-  width: 400px;
+  width: calc((100% - 8rem) / 2);
 }
 
 .hairMenu .cut {
@@ -380,9 +381,12 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 380px;
   padding: 40px 10px;
   position: relative;
+}
+
+.others .menu__item {
+  /* width: 380px; */
 }
 
 /* 上下に線を入れる  */
@@ -814,6 +818,7 @@ table td {
     /* align-items: flex-start; */
     width: 80%;
     margin: 0 auto 40px;
+    flex-direction: column;
   }
   .hairMenu .cut {
     /* padding: 40px 10px; */
@@ -825,9 +830,9 @@ table td {
     width: 100%;
   }
   .menu__category {
-    /* width: 280px; */
-    /* width: 50%; */
+    /* width: calc 指定; */
     flex-direction: column;
+    width: 100%;
   }
 
   .others .menu__item {
@@ -864,6 +869,13 @@ table td {
   .others .menu__item::before {
     /* background: #b0b0b0; */
     background: var(--color-primary);
+  }
+
+  /* =========================
+  salon-photo
+========================= */
+  .salon-photo__inner {
+    margin-bottom: 80px;
   }
 
   /* =========================
