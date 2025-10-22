@@ -163,6 +163,10 @@ h2 {
   color: var(--color-primary);
 }
 
+.sp-header__content {
+  display: none;
+}
+
 /* =========================
   　mv
    ========================= */
@@ -704,6 +708,20 @@ table td {
 
 /* ===== SP ===== */
 @media (max-width: 767px) {
+  /* =========================
+  header
+========================= */
+  nav {
+    display: none;
+  }
+
+  .sp-header__content {
+    display: block;
+  }
+
+  .sp-header__content > .inner {
+  }
+
   .logo img {
     max-width: 40%;
   }
@@ -949,7 +967,8 @@ table td {
     /* left: 0; */
     left: auto;
   }
-}
 
-@media (max-width: 767px) {
+  .googleCalendar iframe {
+    height: 300px;
+  }
 }
