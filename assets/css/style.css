@@ -27,7 +27,7 @@ body {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   display: block;
 }
@@ -377,16 +377,15 @@ h2 {
   padding-right: 1.3rem;
 }
 
+.others .menu__list {
+  width: 100%;
+}
 .others .menu__item {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 40px 10px;
   position: relative;
-}
-
-.others .menu__item {
-  /* width: 380px; */
 }
 
 /* 上下に線を入れる  */
@@ -599,9 +598,11 @@ table td {
 }
 
 .access__content {
-  position: relative;
   display: flex;
   background-color: var(--color-bg-block);
+  gap: 40px;
+  padding-bottom: 40px;
+  justify-content: center;
 }
 
 .access__content > div {
@@ -610,18 +611,18 @@ table td {
 
 .access .access_info {
   font-size: 1.8rem;
-  padding: 40px 0;
+  padding: 40px 0 0;
   letter-spacing: 2px;
 }
 
-.access__salon-photo {
-  position: relative;
+.access__salon-photo > img {
+  margin-top: -80px;
+  width: fit-content;
 }
 
-.access__salon-photo > img {
-  position: absolute;
-  top: -80px;
-  left: 100px;
+.access__salon-photo {
+  display: flex;
+  justify-content: end;
 }
 
 .access .logo {
@@ -630,6 +631,7 @@ table td {
   align-items: end;
   gap: 20px;
   padding-bottom: 40px;
+  width: fit-content;
 }
 
 .access .logo::after {
@@ -898,5 +900,8 @@ table td {
   .reserve .info-detail {
     font-size: 1.4rem;
     letter-spacing: 0.02rem;
+  }
+  .access__content {
+    flex-direction: column;
   }
 }
