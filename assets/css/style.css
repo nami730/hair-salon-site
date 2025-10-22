@@ -798,10 +798,22 @@ table td {
   /* =========================
   hairmenu
 ========================= */
+  .hairMenu__inner {
+    /* pc padding-top: 120px; */
+    /* pc padding-bottom: 120px; */
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .section-title {
+    /* pc margin-bottom: 80px; */
+    margin-bottom: 40px;
+  }
+
   .hairMenu .menu {
     /* align-items: flex-start; */
     width: 80%;
-    margin: 0 auto;
+    margin: 0 auto 40px;
   }
   .hairMenu .cut {
     /* padding: 40px 10px; */
@@ -840,6 +852,18 @@ table td {
 
   .cut .price-category:first-of-type {
     margin-top: 20px;
+  }
+
+  .hairMenu .cut::before,
+  .hairMenu .cut::after {
+    /* background: #b0b0b0; */
+    background: var(--color-primary);
+  }
+
+  .others .menu__item:last-child::after,
+  .others .menu__item::before {
+    /* background: #b0b0b0; */
+    background: var(--color-primary);
   }
 
   /* =========================
