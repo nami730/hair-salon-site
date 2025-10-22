@@ -803,19 +803,45 @@ table td {
     width: 80%;
     margin: 0 auto;
   }
-
+  .hairMenu .cut {
+    /* padding: 40px 10px; */
+    padding: 20px 0px;
+  }
+  .cut .menu__item {
+    /* padding-bottom: 21px; */
+    padding-bottom: 15px;
+    width: 100%;
+  }
   .menu__category {
     /* width: 280px; */
-    width: 100%;
+    /* width: 50%; */
+    flex-direction: column;
   }
 
   .others .menu__item {
     width: 100%;
+    /* padding: 40px 10px; */
+    padding: 20px 0;
   }
 
   .others .menu__list {
     width: 100%;
   }
+
+  .menu__category .label {
+    /* font-size: 2rem; */
+    font-size: 1.8rem;
+  }
+
+  .menu__category .price {
+    /* font-size: 2.2rem; */
+    font-size: 1.8rem;
+  }
+
+  .cut .price-category:first-of-type {
+    margin-top: 20px;
+  }
+
   /* =========================
   reserve
 ========================= */
