@@ -194,7 +194,6 @@ h2 {
   border-top: 8px solid var(--color-primary);
   background-color: var(--color-bg-base);
   padding: 25px;
-  width: 30vw;
 }
 .news .news__header {
   display: flex;
@@ -750,6 +749,8 @@ table td {
     margin-bottom: 40px;
     margin-left: 8%;
     display: block;
+    object-fit: cover;
+    height: 220px;
   }
 
   .concept__inner {
@@ -901,7 +902,54 @@ table td {
     font-size: 1.4rem;
     letter-spacing: 0.02rem;
   }
+
+  /* =========================
+  access
+========================= */
+
   .access__content {
     flex-direction: column;
   }
+
+  .access__salon-photo > img {
+    /* margin-top: -80px; */
+    /* width: fit-content; */
+    margin-top: -100px;
+    width: 100%;
+    max-width: 543px;
+  }
+
+  .access__salon-photo {
+    /* justify-content: end; */
+    justify-content: center;
+  }
+
+  .access .access_info {
+    /* padding: 40px 0 0; */
+    padding: 0 30px;
+    text-align: center;
+  }
+
+  .access .logo {
+    justify-content: center;
+  }
+
+  .access .logo::after {
+    left: 50%;
+  }
+
+  .access__salon-photo > img {
+    width: 69%;
+  }
+
+  .access .access_info {
+    margin: 0 auto;
+  }
+  .access .logo::after {
+    /* left: 0; */
+    left: auto;
+  }
+}
+
+@media (max-width: 767px) {
 }
