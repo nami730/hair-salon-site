@@ -84,7 +84,7 @@
     </header>
     <div class="mainVisual">
       <div class="mainVisual__inner">
-        <div class="slider slider__list">
+        <div class="mv__slider slider__list">
           <div class="slider__item">
             <img src="assets/img/mv/mv_01.jpg" alt="" />
           </div>
@@ -156,12 +156,14 @@
           スタイル
           <span class="section-title__en">style</span>
         </h2>
-        <div class="style__images">
-          <img src="assets/img/style/style_01.jpg" alt="" />
-          <img src="assets/img/style/style_02.jpg" alt="" />
-          <img src="assets/img/style/style_03.jpg" alt="" />
-          <img src="assets/img/style/style_04.jpg" alt="" />
-          <img src="assets/img/style/style_05.jpg" alt="" />
+        <div class="slider__wrap">
+          <div class="style__images style__slider">
+            <img src="assets/img/style/style_01.jpg" alt="" />
+            <img src="assets/img/style/style_02.jpg" alt="" />
+            <img src="assets/img/style/style_03.jpg" alt="" />
+            <img src="assets/img/style/style_04.jpg" alt="" />
+            <img src="assets/img/style/style_05.jpg" alt="" />
+          </div>
         </div>
         <div class="instagram-btn__wrapper">
           <a href="hairmenu.html" class="btn-sub instagram-btn">
@@ -342,28 +344,6 @@
 
         calendar.render();
       });
-    </script>
-    <script>
-      // ハンバーガーメニュー
-      $(function () {
-        $(".btn-trigger").on("click", function () {
-          $(this).toggleClass("active");
-        });
-      });
-      // nav opne
-      (function ($) {
-        var $nav = $("#navArea");
-        var $btn = $(".btn-trigger");
-        var open = "open"; // class
-        // menu open close
-        $btn.on("click", function () {
-          if (!$nav.hasClass(open)) {
-            $nav.addClass(open);
-          } else {
-            $nav.removeClass(open);
-          }
-        });
-      })(jQuery);
     </script>
   </body>
 </html>

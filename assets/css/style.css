@@ -963,7 +963,7 @@ table td {
 ========================= */
 
   .style {
-    padding: 0 8%;
+    padding: 0 0 0 8%;
   }
 
   .style__inner {
@@ -971,10 +971,19 @@ table td {
     margin-bottom: 80px;
   }
 
-  .style__images {
-    justify-content: start;
-    gap: 10px;
+  .style .slider__wrap {
+    overflow: visible !important;
     margin-left: 100px;
+  }
+
+  .style__slider {
+    width: 100%; /* slick が幅を自動計算 */
+    /* padding-right: 80px;  */
+  }
+
+  .style__slider img {
+    width: 196px; /* 画像の固定幅 */
+    margin-right: 10px;
   }
 
   .style__images::after {
@@ -988,6 +997,7 @@ table td {
   .instagram-btn__wrapper {
     margin-right: 0px;
   }
+
   /* =========================
   hairmenu
 ========================= */
