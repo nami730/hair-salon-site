@@ -68,7 +68,7 @@
               <a href="#" class="btn"><span>予約</span></a>
             </div>
             <div class="nav-burgar">
-              <div class="burgar-icon">
+              <div class="burgar-icon btn-trigger" id="btn07">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -339,5 +339,28 @@
         calendar.render();
       });
     </script>
+    <script>
+      // ハンバーガーメニュー
+      $(function () {
+        $(".btn-trigger").on("click", function () {
+          $(this).toggleClass("active");
+        });
+      });
+    </script>
+    <!-- <script>
+      (function ($) {
+        var $nav = $("#navArea");
+        var $btn = $(".toggle_btn");
+        var open = "open"; // class
+        // menu open close
+        $btn.on("click", function () {
+          if (!$nav.hasClass(open)) {
+            $nav.addClass(open);
+          } else {
+            $nav.removeClass(open);
+          }
+        });
+      })(jQuery);
+    </script> -->
   </body>
 </html>
