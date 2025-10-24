@@ -708,9 +708,20 @@ table td {
 
 /* ===== SP ===== */
 @media (max-width: 767px) {
+  .section-title {
+    /* font-size: 2.5rem; */
+    font-size: 2rem;
+  }
+
   /* =========================
   header
 ========================= */
+
+  header .instagram_link img {
+    /* width: 34px; */
+    width: 26px;
+  }
+
   .header__inner {
     margin: 0 2.2%;
   }
@@ -753,6 +764,7 @@ table td {
   }
   .nav-burgar {
     margin-top: 10px;
+    margin-right: 5px;
   }
 }
 
@@ -915,6 +927,12 @@ table td {
     width: 100%; /* pc 30vw */
     margin-top: -30px;
     padding-bottom: 40px;
+    padding: 15px;
+  }
+
+  .news .news__header {
+    /* margin-bottom: 20px; */
+    margin-bottom: 8px;
   }
 
   .news .news__list {
@@ -998,6 +1016,10 @@ table td {
     margin-right: 0px;
   }
 
+  .instagram-btn {
+    margin-right: 8%;
+  }
+
   /* =========================
   hairmenu
 ========================= */
@@ -1019,6 +1041,16 @@ table td {
     margin: 0 auto 40px;
     flex-direction: column;
   }
+
+  .menu__title,
+  .menu__category .price {
+    font-size: 1.8rem;
+  }
+
+  .menu__category .label {
+    font-size: 1.6rem;
+  }
+
   .hairMenu .cut {
     /* padding: 40px 10px; */
     padding: 20px 0px;
@@ -1080,9 +1112,20 @@ table td {
   /* =========================
   reserve
 ========================= */
+
+  .reserve__inner {
+    /* margin: 0 auto 120px; */
+    margin: 0 auto 80px;
+  }
+
   .reserve .schedule {
     width: 100%;
     flex-direction: column;
+  }
+
+  .reserve .schedule-buttons {
+    /* gap: 40px; */
+    gap: 20px;
   }
 
   .reserve .schedule-calendar,
@@ -1101,6 +1144,13 @@ table td {
 
   .fc .fc-daygrid-body-unbalanced .fc-daygrid-day-events {
     min-height: 1em;
+  }
+
+  .fc-view-harness,
+  .fc-col-header,
+  .fc-daygrid-body,
+  .fc-scrollgrid-sync-table {
+    height: 300px;
   }
 
   /* =========================
@@ -1150,10 +1200,9 @@ table td {
     left: auto;
   }
 
-  .fc-view-harness,
-  .fc-col-header,
-  .fc-daygrid-body,
-  .fc-scrollgrid-sync-table {
-    height: 300px;
+  .g-map__btn {
+    /* margin-left: 10px; */
+    margin-top: 10px;
+    margin-right: 6px;
   }
 }
