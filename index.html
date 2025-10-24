@@ -38,25 +38,29 @@
         <h1 class="logo">
           <img src="assets/img/logo@2x.png" alt="hair salon KOBAYAS" />
         </h1>
-        <nav>
-          <ul class="nav__list">
-            <li class="nav__item"><a href="hairmenu.html">ヘアメニュー</a></li>
-            <li class="nav__item">
-              <a href="stylist.html">スタイリストの紹介</a>
-            </li>
-            <li class="nav__item"><a href="news.html">過去のお知らせ</a></li>
-            <li class="nav__item instagram_link">
-              <a href="#"
-                ><img src="assets/icon/instagram.png" alt="instagram icon"
-              /></a>
-            </li>
-            <li class="nav__item btn-reserve">
-              <a href="#" class="btn"
-                ><span class="en-large">WEB</span>で予約</a
-              >
-            </li>
-          </ul>
-        </nav>
+        <div id="navArea">
+          <nav>
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="hairmenu.html">ヘアメニュー</a>
+              </li>
+              <li class="nav__item">
+                <a href="stylist.html">スタイリストの紹介</a>
+              </li>
+              <li class="nav__item"><a href="news.html">過去のお知らせ</a></li>
+              <li class="nav__item instagram_link">
+                <a href="#"
+                  ><img src="assets/icon/instagram.png" alt="instagram icon"
+                /></a>
+              </li>
+              <li class="nav__item btn-reserve">
+                <a href="#" class="btn"
+                  ><span class="en-large">WEB</span>で予約</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
         <div class="sp-header">
           <div class="sp-header__inner">
             <div class="nav__item instagram_link">
@@ -346,11 +350,10 @@
           $(this).toggleClass("active");
         });
       });
-    </script>
-    <!-- <script>
+      // nav opne
       (function ($) {
         var $nav = $("#navArea");
-        var $btn = $(".toggle_btn");
+        var $btn = $(".btn-trigger");
         var open = "open"; // class
         // menu open close
         $btn.on("click", function () {
@@ -361,6 +364,6 @@
           }
         });
       })(jQuery);
-    </script> -->
+    </script>
   </body>
 </html>

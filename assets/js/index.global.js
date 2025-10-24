@@ -2052,7 +2052,8 @@ var FullCalendar = (function (exports) {
       return currentRes;
     };
   }
-  function memoizeArraylike(workerFunc, resEquality, teardownFunc) { // used at all?
+  function memoizeArraylike(workerFunc, resEquality, teardownFunc) {
+    // used at all?
     let currentArgSets = [];
     let currentResults = [];
     return (newArgSets) => {
@@ -4880,8 +4881,7 @@ var FullCalendar = (function (exports) {
     let defs = filterHash(eventStore.defs, filterFunc);
     let instances = filterHash(
       eventStore.instances,
-      (instance) =>
-        defs[instance.defId] // still exists?
+      (instance) => defs[instance.defId] // still exists?
     );
     return { defs, instances };
   }
@@ -5130,8 +5130,7 @@ var FullCalendar = (function (exports) {
       case "REMOVE_ALL_EVENT_SOURCES":
         return filterEventStoreDefs(
           eventStore,
-          (eventDef) =>
-            !eventDef.sourceId // only keep events with no source id
+          (eventDef) => !eventDef.sourceId // only keep events with no source id
         );
       case "REMOVE_ALL_EVENTS":
         return createEmptyEventStore();
@@ -8483,7 +8482,8 @@ var FullCalendar = (function (exports) {
         eventSelection: props.eventSelection,
       }; // TODO: give interactionSegs?
     }
-    sliceNowDate(date, dateProfile, nextDayThreshold, context, ...extraArgs) { // does not memoize
+    sliceNowDate(date, dateProfile, nextDayThreshold, context, ...extraArgs) {
+      // does not memoize
       return this._sliceDateSpan(
         { range: { start: date, end: addMs(date, 1) }, allDay: false }, // add 1 ms, protect against null range
         dateProfile,

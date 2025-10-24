@@ -163,7 +163,7 @@ h2 {
   color: var(--color-primary);
 }
 
-.sp-header__content {
+.sp-header {
   display: none;
 }
 
@@ -719,8 +719,13 @@ table td {
     /* top: 0; */
     top: 20px;
   }
-  nav {
-    display: none;
+
+  .logo img {
+    max-width: 40%;
+  }
+
+  .sp-header {
+    display: block;
   }
 
   .sp-header__content {
@@ -736,23 +741,158 @@ table td {
   .sp-header__inner > .btn-reserve {
     flex-direction: column;
   }
-  .btn-reserve .btn {
+  .sp-header .btn-reserve .btn {
     flex-direction: column-reverse;
     padding: 5px 14px;
     border-radius: 0;
     font-size: 1.2rem;
   }
 
-  .btn-reserve .btn::after {
+  .sp-header .btn-reserve .btn::after {
     margin-left: 0px;
   }
   .nav-burgar {
     margin-top: 10px;
   }
+}
 
-  .logo img {
-    max-width: 40%;
+/*=============================
+#ハンバーガー
+=============================*/
+@media (max-width: 767px) {
+  .btn-trigger {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1000;
   }
+
+  .btn-trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px; /* ←ラインの太さ3px */
+    background-color: var(--color-primary);
+    border-radius: 3px;
+    transition: all 0.5s;
+    box-sizing: border-box;
+  }
+
+  /* --- 各ラインの位置 --- */
+  .btn-trigger span:nth-of-type(1) {
+    top: 0;
+  }
+  .btn-trigger span:nth-of-type(2) {
+    top: 8px; /* ← gap 約5px */
+  }
+  .btn-trigger span:nth-of-type(3) {
+    top: 16px; /* ← 3px＋5px＋3px＋5px の位置に合わせる */
+  }
+
+  /* --- 通常状態（戻る動き） --- */
+  #btn07 span:nth-of-type(1) {
+    animation: btn07-bar01 0.75s forwards;
+  }
+  @keyframes btn07-bar01 {
+    0% {
+      transform: translateY(8px) rotate(45deg);
+    }
+    50% {
+      transform: translateY(8px) rotate(0);
+    }
+    100% {
+      transform: translateY(0) rotate(0);
+    }
+  }
+
+  #btn07 span:nth-of-type(2) {
+    transition: all 0.25s 0.25s;
+    opacity: 1;
+  }
+
+  #btn07 span:nth-of-type(3) {
+    animation: btn07-bar03 0.75s forwards;
+  }
+  @keyframes btn07-bar03 {
+    0% {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+    50% {
+      transform: translateY(-8px) rotate(0);
+    }
+    100% {
+      transform: translateY(0) rotate(0);
+    }
+  }
+
+  /* --- アクティブ状態（×に変化） --- */
+  #btn07.active span:nth-of-type(1) {
+    animation: active-btn07-bar01 0.75s forwards;
+  }
+  @keyframes active-btn07-bar01 {
+    0% {
+      transform: translateY(0) rotate(0);
+    }
+    50% {
+      transform: translateY(8px) rotate(0);
+    }
+    100% {
+      transform: translateY(8px) rotate(45deg);
+    }
+  }
+
+  #btn07.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  #btn07.active span:nth-of-type(3) {
+    animation: active-btn07-bar03 0.75s forwards;
+  }
+  @keyframes active-btn07-bar03 {
+    0% {
+      transform: translateY(0) rotate(0);
+    }
+    50% {
+      transform: translateY(-8px) rotate(0);
+    }
+    100% {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+
+  /* --- open時のnav設定 --- */
+  header .nav__list {
+    flex-direction: column;
+  }
+
+  #navArea {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-bg-block);
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.6s ease;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+  }
+
+  #navArea.open {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  nav {
+    margin-top: 80px;
+  }
+
+  /* =========================
+  mainVisual
+========================= */
 
   .mainVisual .mainVisual__inner {
     margin: 0 auto; /* pc  mvしたのマージン外す */
@@ -1005,112 +1145,5 @@ table td {
   .fc-daygrid-body,
   .fc-scrollgrid-sync-table {
     height: 300px;
-  }
-}
-
-@media (max-width: 767px) {
-  /*=============================
-#btn07
-=============================*/
-
-  .btn-trigger {
-    position: relative;
-    width: 30px;
-    height: 30px; /* 高さを小さく調整 */
-    cursor: pointer;
-    z-index: 50;
-  }
-
-  .btn-trigger span {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 3px; /* ←ラインの太さ3px */
-    background-color: var(--color-primary);
-    border-radius: 3px;
-    transition: all 0.5s;
-    box-sizing: border-box;
-  }
-
-  /* --- 各ラインの位置 --- */
-  .btn-trigger span:nth-of-type(1) {
-    top: 0;
-  }
-  .btn-trigger span:nth-of-type(2) {
-    top: 8px; /* ← gap 約5px */
-  }
-  .btn-trigger span:nth-of-type(3) {
-    top: 16px; /* ← 3px＋5px＋3px＋5px の位置に合わせる */
-  }
-
-  /* --- 通常状態（戻る動き） --- */
-  #btn07 span:nth-of-type(1) {
-    animation: btn07-bar01 0.75s forwards;
-  }
-  @keyframes btn07-bar01 {
-    0% {
-      transform: translateY(8px) rotate(45deg);
-    }
-    50% {
-      transform: translateY(8px) rotate(0);
-    }
-    100% {
-      transform: translateY(0) rotate(0);
-    }
-  }
-
-  #btn07 span:nth-of-type(2) {
-    transition: all 0.25s 0.25s;
-    opacity: 1;
-  }
-
-  #btn07 span:nth-of-type(3) {
-    animation: btn07-bar03 0.75s forwards;
-  }
-  @keyframes btn07-bar03 {
-    0% {
-      transform: translateY(-8px) rotate(-45deg);
-    }
-    50% {
-      transform: translateY(-8px) rotate(0);
-    }
-    100% {
-      transform: translateY(0) rotate(0);
-    }
-  }
-
-  /* --- アクティブ状態（×に変化） --- */
-  #btn07.active span:nth-of-type(1) {
-    animation: active-btn07-bar01 0.75s forwards;
-  }
-  @keyframes active-btn07-bar01 {
-    0% {
-      transform: translateY(0) rotate(0);
-    }
-    50% {
-      transform: translateY(8px) rotate(0);
-    }
-    100% {
-      transform: translateY(8px) rotate(45deg);
-    }
-  }
-
-  #btn07.active span:nth-of-type(2) {
-    opacity: 0;
-  }
-
-  #btn07.active span:nth-of-type(3) {
-    animation: active-btn07-bar03 0.75s forwards;
-  }
-  @keyframes active-btn07-bar03 {
-    0% {
-      transform: translateY(0) rotate(0);
-    }
-    50% {
-      transform: translateY(-8px) rotate(0);
-    }
-    100% {
-      transform: translateY(-8px) rotate(-45deg);
-    }
   }
 }
