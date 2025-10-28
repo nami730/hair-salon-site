@@ -333,23 +333,13 @@ h2 {
 .hairMenu .cut {
   position: relative;
   padding: 40px 10px;
+  border-top: 1px solid var(--color-primary);
+  border-bottom: 1px solid var(--color-primary);
 }
 
-.hairMenu .cut::before,
 .hairMenu .cut::after {
-  content: "";
   position: absolute;
-  left: -10px;
-  right: -10px;
-  height: 1px;
-  background: #b0b0b0;
-}
-
-.hairMenu .cut::before {
-  top: 0;
-}
-.hairMenu .cut::after {
-  bottom: -0.5px;
+  bottom: -30px;
   content: "※学生の方は学生証をご提示頂きます。";
 }
 
@@ -390,25 +380,11 @@ h2 {
   align-items: center;
   padding: 40px 10px;
   position: relative;
+  border-top: 1px solid var(--color-primary);
 }
 
-/* 上下に線を入れる  */
-.others .menu__item:last-child:after,
-.others .menu__item::before {
-  content: "";
-  position: absolute;
-  left: -10px;
-  right: -10px;
-  height: 1px;
-  background: #b0b0b0;
-}
-
-.others .menu__item::before {
-  top: 0;
-}
-
-.others .menu__item:last-child:after {
-  bottom: 0;
+.others .menu__item:last-of-type {
+  border-bottom: 1px solid var(--color-primary);
 }
 
 .cut .menu__title,
@@ -1093,18 +1069,6 @@ table td {
 
   .cut .price-category:first-of-type {
     margin-top: 20px;
-  }
-
-  .hairMenu .cut::before,
-  .hairMenu .cut::after {
-    /* background: #b0b0b0; */
-    background: var(--color-primary);
-  }
-
-  .others .menu__item:last-child::after,
-  .others .menu__item::before {
-    /* background: #b0b0b0; */
-    background: var(--color-primary);
   }
 
   /* =========================
