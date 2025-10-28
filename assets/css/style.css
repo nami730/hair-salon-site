@@ -430,6 +430,10 @@ h2 {
 .salon-photo__inner > img {
   margin: auto;
 }
+
+.salon-photo__sp {
+  display: none;
+}
 /* =========================
   reserve
 ========================= */
@@ -1107,6 +1111,14 @@ table td {
 ========================= */
   .salon-photo__inner {
     margin-bottom: 80px;
+  }
+
+  .salon-photo__pc {
+    display: none;
+  }
+
+  .salon-photo__sp {
+    display: block;
   }
 
   /* =========================
