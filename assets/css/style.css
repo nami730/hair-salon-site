@@ -281,21 +281,21 @@ h2 {
 
 .style__images {
   display: flex;
-  justify-content: end;
   gap: 25px;
   position: relative;
   margin-bottom: 40px;
+  margin-left: 100px;
 }
 
 .style__images::after {
   content: "";
-  width: 363px;
+  width: 366px;
   height: 74px;
   background-image: url(../img/style/style_instagram.png);
   background-repeat: no-repeat;
   position: absolute;
   bottom: -50px;
-  left: -140px;
+  left: -202px;
 }
 
 .instagram-btn__wrapper {
@@ -303,6 +303,7 @@ h2 {
   justify-content: end;
   margin-right: 100px;
 }
+
 /* =========================
   hairMenu
 ========================= */
